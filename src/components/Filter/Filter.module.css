@@ -1,0 +1,25 @@
+.find_form {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(77, 249, 255);
+  padding: 8px;
+}
+
+.find_input {
+  display: block;
+  padding: 5px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-style: italic;
+  border-radius: 8px;
+  border: 1px solid rgb(77, 249, 255);
+  box-shadow: 1px 1px 5px rgb(77, 249, 255);
+  background-color: transparent;
+  color: rgb(77, 249, 255);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.find_input:hover,
+.find_input:focus {
+  background-color: rgb(18, 107, 129);
+}

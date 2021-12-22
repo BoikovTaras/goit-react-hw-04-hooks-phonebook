@@ -1,0 +1,55 @@
+.contact_list {
+  list-style: none;
+  padding-left: 0;
+}
+.contact_item {
+  border: 1px solid rgb(77, 249, 255);
+  box-shadow: 1px 1px 5px rgb(77, 249, 255);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-style: italic;
+  color: rgb(77, 249, 255);
+}
+
+.delete {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  line-height: 20px;
+  font-size: 1.25;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(157, 188, 201, 0.877), 0 -1px rgba(139, 6, 6, 0.8);
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  background: rgb(11, 65, 70)
+    radial-gradient(
+      150% 100% at 50% 5px,
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 0, 0, 0)
+    );
+  box-shadow: inset rgba(255, 10, 10, 0.692) 0 -2px 5px,
+    inset rgba(121, 255, 255, 0.7) 0 2px 5px, rgba(0, 0, 0, 0.8) 0 2px 5px -1px;
+  color: rgba(12, 215, 241, 0.795);
+  user-select: none;
+}
+
+.delete:hover,
+.delete:focus {
+  color: rgba(252, 7, 7, 0.747);
+  cursor: pointer;
+}
+
+.delete:active {
+  padding-bottom: 1px;
+  box-shadow: inset rgba(0, 0, 0, 1) 0 1px 3px,
+    inset rgba(0, 0, 0, 0.6) 0 -2px 5px,
+    inset rgba(252, 255, 255, 0.7) 0 2px 5px, 0 1px rgba(255, 255, 255, 0.08);
+  color: rgb(128, 207, 214);
+}
