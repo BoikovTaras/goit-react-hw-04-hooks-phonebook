@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import s from './Input.module.css';
 
-export default function Input() {
+export default function Input({ contacts, addContact }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const addName = value => setName(value.currentTarget);
+  const addName = v => setName(v.currentTarget.value);
 
-  const addNumber = value => setNumber(value.currentTarget);
+  const addNumber = v => setNumber(v.currentTarget.value);
 
   const reset = () => {
     setName('');
@@ -18,14 +18,10 @@ export default function Input() {
   };
 
   const addNewContact = event => {
-    if (
-      this.props.contacts.find(
-        item => item.name.toLowerCase() === name.toLowerCase(),
-      )
-    ) {
+    if (contacts.find(item => item.name.toLowerCase() === name.toLowerCase())) {
       return window.alert(`${name} is alredy in contacts`, 2500);
     } else {
-      this.props.addContact(renderContact());
+      addContact(renderContact());
       reset();
     }
   };
@@ -62,7 +58,7 @@ export default function Input() {
           placeholder="Enter phone number"
         />
       </label>
-      <button className={s.button} type="submit" onClick={addNewContact}>
+      <button className={s.button} type="button" onClick={addNewContact}>
         Add contact
       </button>
     </form>
